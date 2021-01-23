@@ -607,7 +607,7 @@ function ldvmLin(surf::TwoDSurf, curfield::TwoDFlowField, nsteps::Int64 = 500, d
 
 #Set previous values of aterm to be used for derivatives in next time step
 surf.a0prev[1] = surf.a0[1]
-for ia = 1:3
+for ia = 1:surf.naterm
     surf.aprev[ia] = surf.aterm[ia]
 end
 
